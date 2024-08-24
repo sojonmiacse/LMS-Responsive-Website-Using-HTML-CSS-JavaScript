@@ -1,0 +1,915 @@
+/* ==================================
+Google Fonts Import - Poppins
+================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* ==================================
+Pre-CSS
+================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ==================================
+Reusuable CSS 
+================================== */
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: rgb(35, 35, 85);
+}
+
+.section-p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgb(35, 35, 85);
+}
+
+h6 {
+  font-size: 1.1rem;
+  color: rgb(24, 24, 49);
+}
+
+span {
+  font-size: .9rem;
+  color: #757373;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ==================================
+Header CSS 
+================================== */
+#header-section {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1vw 8vw;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+  z-index: 999;
+}
+
+.nav-logo img {
+  width: 150px;
+}
+
+/* ==================================
+Nav CSS 
+================================== */
+.navbar .nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.navbar {
+  display: flex;
+}
+
+.hamburger {
+  width: 30px;
+  height: 30px;
+  display: none;
+}
+
+#menu-close {
+  display: none;
+}
+
+.nav-item {
+  margin-left: 30px;
+}
+
+.nav-item .nav-link {
+  color: rgb(21, 21, 100);
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.nav-item .nav-link:hover {
+  color: #FDC93B;
+}
+
+.nav-item a.active {
+  color: #FDC93B;
+}
+
+/* ==================================
+Home CSS 
+================================== */
+#home {
+  background-image: linear-gradient(rgba(9, 5, 54, 0.3), rgba(5, 4, 46, 0.7)), url(../images/back.jpg);
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 40px;
+}
+
+#home h1 {
+  font-size: 2.2rem;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+#home p {
+  width: 50%;
+  font-size: 0.9rem;
+  color: #fff;
+  line-height: 25px;
+}
+
+.home-btns {
+  margin-top: 30px;
+}
+
+.home-btns a {
+  font-size: 0.9rem;
+  padding: 13px 35px;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+.home-more-btn {
+  color: #fff;
+  background-color: rgb(21, 21, 100);
+  transition: 0.3s ease;
+}
+
+.home-more-btn:hover {
+  color: rgb(21, 21, 100);
+  background-color: #fff;
+}
+
+.home-courses-btn {
+  color: rgb(21, 21, 100);
+  background-color: #FDC93B;
+  transition: 0.3s ease;
+}
+
+.home-courses-btn:hover {
+  color: #FDC93B;
+  background-color: rgb(21, 21, 100);
+}
+
+/* ==================================
+Feature CSS 
+================================== */
+#feature {
+  padding: 8vw 8vw 0 8vw;
+  text-align: center;
+}
+
+.feature-boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1rem;
+  margin-top: 50px;
+}
+
+.feature-box {
+  background-color: #f9f9ff;
+  text-align: start;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.feature-box i {
+  font-size: 2.3rem;
+  color: rgb(35, 35, 85);
+}
+
+.feature-box h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgb(35, 35, 85);
+  padding: 13px 0 7px 0;
+}
+
+.feature-box p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgb(35, 35, 85);
+}
+
+/* ==================================
+Courses CSS 
+================================== */
+#course {
+  padding: 8vw;
+  text-align: center;
+}
+
+.course-boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1rem;
+  margin-top: 50px;
+}
+
+.course-box {
+  text-align: start;
+  background-color: #f9f9ff;
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+}
+
+.course-box .course-details {
+  padding: 10px 15px 0 15px;
+}
+
+.course-box img {
+  width: 100%;
+  height: 60%;
+  background-size: cover;
+  background-position: center;
+}
+
+.star i {
+  color: #FDC93B;
+  font-size: .9rem;
+}
+
+.course-box .course-price {
+  background-color: rgb(74, 74, 136);
+  color: #fff;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: absolute;
+  right: 15px;
+  bottom: 100px;
+}
+
+/* ==================================
+Registration CSS 
+================================== */
+#registration {
+  padding: 6vw 8vw 6vw 8vw;
+  background-image: linear-gradient(rgba(99, 112, 168, 0.5), rgba(81, 91, 233, 0.5)), url("../images/signup.jpg");
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.reminder {
+  color: #fff;
+}
+
+.reminder h2 {
+  color: #fff;
+}
+
+.reminder .duration {
+  margin-top: 40px;
+  display: flex;
+}
+
+.duration .date {
+  text-align: center;
+  padding: 13px 33px;
+  background-color: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border-radius: 10px;
+  margin: 0 5px 10px 5px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-size: 1, 1rem;
+  font-weight: 600;
+}
+
+.registration-form {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 40px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.registration-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.registration-form h3 {
+  color: rgb(35, 35, 85);
+}
+
+.registration-form form input {
+  margin: 15px 0;
+  padding: 15px 10px;
+  outline: none;
+  border: 1px solid rgb(35, 35, 85);
+  color: #413c3c;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.registration-form form input::placeholder {
+  color: #413c3c;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.registration-form button {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  padding: 13px 35px;
+  font-weight: 600;
+  border-radius: 5px;
+  color: rgb(21, 21, 100);
+  background-color: #FDC93B;
+  transition: .3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.registration-form button:hover {
+  background-color: rgb(21, 21, 100);
+  color: #FDC93B;
+}
+
+/* ==================================
+Community section CSS 
+================================== */
+#community {
+  padding: 8vw;
+  text-align: center;
+}
+
+.porile-boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 50px;
+}
+
+.profile-box {
+  background-color: #f9f9ff;
+  padding: 30px 10px;
+}
+
+.profile-link {
+  margin-top: 10px;
+}
+
+.profile-link i {
+  color: rgb(35, 35, 85);
+  padding: 10px 13px;
+  border: 1px solid rgb(21, 21, 100);
+  transition: 0.3s ease;
+}
+
+.profile-link i:hover {
+  color: #fff;
+  background-color: rgb(21, 21, 100);
+}
+
+/* ==================================
+Footer CSS 
+================================== */
+footer {
+  padding: 8vw 8vw 3vw 8vw;
+  background-color: #101c32;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+footer .footer-widget {
+  padding-bottom: 40px;
+}
+
+.footer-widget h3 {
+  color: #fff;
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+
+.footer-widget ul li a {
+  display: block;
+  color: #7b838a;
+  padding: 5px 0;
+  font-size: 15px;
+  transition: 0.3s ease;
+}
+
+.footer-widget ul li a:hover {
+  color: #fff;
+}
+
+.footer-widget p {
+  color: #7b838a;
+}
+
+.footer-widget .subscribe {
+  margin-top: 20px;
+}
+
+.footer-widget input {
+  width: 220px;
+  padding: 15px 12px;
+  outline: none;
+  color: #413c3c;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.footer-widget input::placeholder {
+  color: #413c3c;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.footer-widget button {
+  padding: 16px 12px;
+  background-color: #FDC93B;
+  color: rgb(21, 21, 100);
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.footer-widget button:hover {
+  background-color: #fff;
+}
+
+footer .copyright {
+  margin-top: 20px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.footer-profile-link i {
+  color: #f9f9ff;
+  padding: 10px 13px;
+  border: 1px solid #FDC93B;
+  transition: 0.3s ease;
+}
+
+.footer-profile-link i:hover {
+  color: rgb(21, 21, 100);
+  background-color: #fff;
+}
+
+/* ==================================
+About home section
+================================== */
+#about-home {
+  background-image: linear-gradient(rgba(9, 5, 54, 0.3), rgba(5, 4, 46, 0.7)), url(../images/back1.jpg);
+  width: 100%;
+  height: 60vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 40px;
+}
+
+#about-home h1 {
+  font-size: 2.2rem;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+/* ====================================
+About container css
+==================================== */
+#about-container {
+  padding: 8vw 8vw 0 8vw;
+  display: flex;
+  align-items: center;
+}
+
+#about-container .about-img {
+  width: 60%;
+  padding-right: 60px;
+}
+
+#about-container .about-img img {
+  width: 100%;
+}
+
+#about-container .about-text {
+  width: 40%;
+}
+
+#about-container .about-text h3 {
+  color: #29303b;
+  font-size: 2rem;
+  padding-bottom: 15px;
+}
+
+#about-container .about-text p {
+  color: #686f7a;
+  font-weight: 300;
+}
+
+#about-container .about-feature {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 30px;
+}
+
+#about-container .about-feature img {
+  width: 50px;
+  background-size: cover;
+  background-position: center;
+  margin-right: 20px;
+}
+
+#about-container .about-feature .feature-text {
+  width: 90%;
+}
+
+#about-container .about-feature .feature-text h5 {
+  font-size: 16px;
+  color: #29303b;
+}
+
+/* =====================================
+Trust Secstino css
+===================================== */
+#trust {
+  text-align: center;
+  padding: 8vw;
+}
+
+#trust .trust-img {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#trust .trust-img img {
+  width: 90px;
+  height: auto;
+}
+
+/* ======================================
+Blog CSS
+====================================== */
+#blog-section {
+  padding: 8vw;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+#blog-section .blogpost {
+  width: 60%;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+#blog-section .blogpost p {
+  text-align: justify;
+}
+
+#blog-section .blogs {
+  width: 60%;
+}
+
+article {
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+  margin-bottom: 50px;
+  padding-bottom: 30px;
+}
+
+#blog-section .blogs img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+#blog-section h3 {
+  color: #29303b;
+  padding: 15px 0 10px 10px;
+}
+
+#blog-section p {
+  color: #757373;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding: 0 10px 20px 10px;
+}
+
+#blog-section .blog-btn {
+  font-size: 0.9rem;
+  padding: 13px 35px;
+  font-weight: 600;
+  border-radius: 5px;
+  color: rgb(21, 21, 100);
+  background-color: #FDC93B;
+  transition: 0.3s ease;
+  margin-left: 10px;
+}
+
+#blog-section .blog-btn:hover {
+  color: #FDC93B;
+  background-color: rgb(21, 21, 100);
+}
+
+#blog-section .sidebar {
+  width: 30%;
+}
+
+#blog-section .sidebar h3 {
+  padding-bottom: 10px;
+  font-size: 2rem;
+}
+
+#blog-section .sidebar a {
+  color: #757373;
+  font-weight: 500;
+  line-height: 45px;
+}
+
+/* ==================================
+Course inner page css
+=================================== */
+#course-inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 8vw;
+}
+#course-inner h3{
+  padding: 35px 0 25px 0;
+  color: #29303b;
+}
+#course-inner p{
+  color: #64626e;
+}
+#course-inner hr{
+  color: rgba(236, 226, 229, 0.5);
+  height: 1px;
+  margin-top: 40px;
+}
+#course-inner .overview {
+  width: 70%;
+}
+
+#course-inner .overview .course-img {
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+#course-inner .overview .course-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+#course-inner .overview .course-head .c-name {
+  width: 70%;
+}
+#course-inner .overview .course-head .c-name h4 {
+  color: #29303b;
+  font-size: 1.3rem;
+  padding: 10px 0;
+}
+
+#course-inner .overview .course-head .c-name p {
+  font-size: 15px;
+  margin-top: 6px;
+}
+
+#course-inner .overview .course-head span {
+  padding: 16px 22px;
+  color: #5838fc;
+  font-size: 24px;
+  font-weight: 700;
+  background-color: rgba(88, 56, 252, 0.1);
+  border-radius: 5px;
+}
+#course-inner .learn p{
+  font-size: 15px;
+  padding-bottom: 15px;
+}
+#course-inner .learn i{
+  color: #654ce4;
+  font-weight: 700;
+  margin-right: 15px;
+}
+#course-inner .tutor{
+  display: flex;
+  align-items: center;
+}
+#course-inner .tutor img{
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+#course-inner .tutor h5{
+  font-size: 15px;
+}
+#course-inner .enroll{
+  width: 300px;
+  padding: 0 30px 30px 30px;
+  border-radius: 10px;
+  box-shadow: 0 20px 40px 0 rgba(11, 2, 55, 0.189);
+}
+#course-inner .enroll p{
+  font-size: 15px;
+  color: #64626e;
+  margin: 15px 0;
+}
+#course-inner .enroll i{
+  color: #654ce4;
+  font-weight: 700;
+  margin-right: 15px;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  text-align: center;
+}
+#course-inner .enroll .enroll-heading{
+  padding-bottom: 0px;
+}
+#course-inner .enroll-btn{
+  margin-top: 30px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+#course-inner .enroll-btn a{
+  display: block;
+  font-size: 0.9rem;
+  padding: 13px 35px;
+  font-weight: 600;
+  border-radius: 5px;
+  color: rgb(21, 21, 100);
+  background-color: #FDC93B;
+  transition: 0.3s ease;
+}
+#course-inner .enroll-btn a:hover{
+  color: #FDC93B;
+  background-color: rgb(21, 21, 100);
+}
+
+/* =================================
+Contact page css
+================================= */
+#contact{
+  padding: 8vw;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+#contact .contact-address{
+  width: 350px;
+}
+#contact .contact-address h3{
+  color: #2c234d;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: .8;
+  margin-bottom: 16px;
+}
+#contact .contact-address p{
+  color: #686875;
+  line-height: 24px;
+  margin-bottom: 33px;
+  padding-bottom: 25px;
+}
+#contact .contact-address h4{
+  color: #2c234d;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 26px;
+  margin-bottom: 15px;
+}
+#contact .contact-address-details .address-details{
+  display: flex;
+}
+#contact .contact-address-details .address-details i{
+  font-size: 16px;
+  line-height: 22px;
+  color: #5838fc;
+  margin-right: 20px;
+}
+#contact .contact-address-details .address-details p{
+  font-size: 14px;
+  line-height: 22px;
+  margin-bottom: 15px;
+}
+#contact .contact-form{
+  width: 60%;
+  background-color: #f7f6fa;
+  padding: 40px;
+  border-radius: 10px;
+}
+#contact .contact-form h4{
+  font-size: 24px;
+  color: #2c234d;
+  line-height: 30px;
+  margin-bottom: 8px;
+}
+#contact .contact-form p{
+  color: #686875;
+  line-height: 24px;
+  padding-bottom: 25px;
+}
+#contact .form-row{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+#contact .form-row input{
+  width: 48%;
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 3px;
+  border: none;
+  background-color: #fff;
+  color: #7e7c87;
+  outline: none;
+  padding: 20px 30px;
+  margin-bottom: 20px;
+}
+#contact .form-col input,
+#contact .form-col textarea{
+  width: 100%;
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 3px;
+  border: none;
+  background-color: #fff;
+  color: #7e7c87;
+  outline: none;
+  padding: 20px 30px;
+  margin-bottom: 20px;
+}
+#contact .form-col button{
+  font-size: 0.9rem;
+  padding: 13px 35px;
+  font-weight: 600;
+  border-radius: 5px;
+  color: rgb(21, 21, 100);
+  background-color: #FDC93B;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s ease;
+}
+#contact .form-col button:hover{
+  color: #FDC93B;
+  background-color: rgb(21, 21, 100);
+}
+#map{
+  width: 100%;
+  height: 70vh;
+  margin-bottom: 8vw;
+}
+#map iframe{
+  width: 100%;
+  height: 100%;
+}
